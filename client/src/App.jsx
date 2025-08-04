@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import ProtectedRoute from "./components/ProtectedRoute";
-import Loader from "./components/Loader";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Loader from "./components/Loader.jsx";
 import { Box } from "@mui/material";
 
 // Lazy loaded pages
