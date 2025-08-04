@@ -41,13 +41,13 @@ A full-stack MERN (MongoDB, Express, React, Node.js) application to manage and t
 
 ```bash
 git clone https://github.com/sunilv21/myexpensetracker.git
-cd expense-tracker
+cd myexpensetracker
 ```
 
 ### 2. Backend Setup
 
 ```bash
-cd backend
+cd server
 npm install
 ```
 
@@ -59,7 +59,7 @@ MONGO_URI=your_mongo_db_uri
 JWT_SECRET=your_jwt_secret
 ```
 
-Start the backend:
+Start the server:
 
 ```bash
 npm run dev
@@ -68,7 +68,7 @@ npm run dev
 ### 3. Frontend Setup
 
 ```bash
-cd frontend
+cd client
 npm install
 ```
 
@@ -109,7 +109,9 @@ npm run dev
 myexpensetracker/
 ├── server/
 │   ├── server.js
-│   ├── config/
+│   ├── config/db.js
+│   ├── package.json
+│   ├── package-lock.json
 │   ├── middlewares/
 │   │   ├── authMiddleware.js
 │   │   ├── errorHandler.js
@@ -130,36 +132,55 @@ myexpensetracker/
 │       └── generateToken.js
 │
 ├── client/
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── components/
-│   │   ├── Header.jsx
-│   │   ├── ProtectedRoute.jsx
-│   │   ├── Footer.jsx
-│   ├── pages/
-│   │   ├── LoginPage.jsx
-│   │   ├── RegisterPage.jsx
-│   │   ├── Dashboard.jsx
-│   │   ├── AdminPanel.jsx
-│   │   ├── ExpenseForm.jsx
-│   │   ├── AuditLogs.jsx
-│   │   └── Insight.jsx
-│   ├── context/
-│   │   └── AuthContext.jsx
-│   ├── api/
-│   │   ├── auth.js
-│   │   ├── audit.js
-│   │   ├── expense.js
-│   │   └── axios.js
+│  ├───.gitignore
+│  ├───eslint.config.js
+│  ├───index.html
+│  ├───package-lock.json
+│  ├───package.json
+│  ├───README.md
+│  ├─ ──vercel.json
+│  ├───vite.config.js
+│  ├───public\
+│  │   ├───favicon.png
+│  └───vite.svg
+│  └───src\
+│      ├───App.css
+│      ├───App.jsx
+│      ├───index.css
+│      ├───main.jsx
+│      ├───api\
+│      │   ├───audit.js
+│      │   ├───auth.js
+│      │   ├───axios.js
+│      │   └───expense.js
+│      ├───assets\
+│      │   └───react.svg
+│      ├───components\
+│      │   ├───Footer.jsx
+│      │   ├───Header.jsx
+│      │   ├───Loader.jsx
+│      │   └───ProtectedRoute.jsx
+│      ├───context\
+│      │   └───AuthContext.jsx
+│      └───pages\
+│          ├───AdminPanel.jsx
+│          ├───AuditLogs.jsx
+│          ├───Dashboard.jsx
+│          ├───ExpenseForm.jsx
+│          ├───Insights.jsx
+│          ├───LoginPage.jsx
+│          ├───NotFound.jsx
+│          └───RegisterPage.jsx
 │
 ├── screenshots/
 │   ├── login.png
 │   ├── register.png
 │   ├── dashboard.png
-│   ├── expenses.png
-│   ├── admin-panel.png
-│   ├── audit-logs.png
-│   └── insight.png
+│   ├── add expenses.png
+│   ├── admin panel.png
+│   ├── audit logs.png
+│   └── insight Pie Chart.png
+│   └── insight Line Graph.png
 ```
 
 ---
